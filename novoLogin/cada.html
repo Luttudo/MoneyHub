@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Cadastro de Usuário</title>
+  <script src="https://www.gstatic.com/firebasejs/9.6.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.0/firebase-auth.js"></script>
+    <!-- Configure o Firebase com as credenciais do seu projeto -->
+    <script>
+        const firebaseConfig = {
+          apiKey: "AIzaSyAva5fyh1j5_SnLZVYu3F1EnW7lh4YPSTo",
+          authDomain: "moneyhub-f2246.firebaseapp.com",
+          projectId: "moneyhub-f2246",
+          storageBucket: "moneyhub-f2246.appspot.com",
+          messagingSenderId: "611591284009",
+          appId: "1:611591284009:web:cb7829aa12bba14b41c338"
+        };
+        // Inicialize o Firebase
+
+        firebase.initializeApp(firebaseConfig);
+    </script>
+</head>
+<body>
+  <h1>Cadastro de Usuário</h1>
+
+  <form id="signup-form">
+    <label for="email">Email:</label>
+    <input type="email" id="email" required><br>
+
+    <label for="password">Senha:</label>
+    <input type="password" id="password" required><br>
+
+    <button type="submit">Cadastrar</button>
+  </form>
+
+  <script>
+    // Obtenha referências aos elementos do formulário
+    var signupForm = document.getElementById('signup-form');
+    var emailInput = document.getElementById('email');
+    var passwordInput = document.getElementById('password');
+
+    // Adicione um ouvinte de evento para o envio do formulário
+    signupForm.addEventListener('submit', function(event) {
+      event.preventDefault(); // Impede o envio padrão do formulário
+
+      var email = emailInput.value;
+      var password = passwordInput.value;
+
+      // Crie um novo usuário com o email e a senha fornecidos
+      firebase.auth().createUserWithEmailAndPassword(email, password)
+        .then(function(userCredential) {
+          // Cadastro bem-sucedido, faça algo aqui (por exemplo, redirecione para outra página)
+          console.log('Usuário cadastrado com sucesso:', userCredential.user);
+        })
+        .catch(function(error) {
+          // Ocorreu um erro durante o cadastro, trate-o aqui
+          console.error('Erro ao cadastrar usuário:', error);
+        });
+    });
+  </script>
+</body>
+</html>
