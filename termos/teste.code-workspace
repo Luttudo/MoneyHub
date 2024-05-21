@@ -1,0 +1,22 @@
+{
+	"folders": [
+		{
+			"path": "../../MONEYHUB"
+		},
+		{
+			"path": "."
+		},
+		{
+			"path": "../projeto"
+		},
+		{
+			"path": "../sigin"
+		},
+		{
+			"path": "../assets"
+		}
+	],
+	"settings": {
+		"totvsLanguageServer.welcomePage": false
+	}
+}
