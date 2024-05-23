@@ -24,3 +24,6 @@ body {
   border-top-right-radius: 0;
 }
 
+.grad {
+  background-image: linear-gradient(to right, red , yellow);
+}
