@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Banco XYZ - Operações</title>
+    <link rel="stylesheet" type="text/css" href="aii.css">
+
+</head>
+<body>
+    <h1>Banco XYZ - Operações</h1>
+
+    <h2>Transferência de Valores</h2>
+    <form>
+        <label for="conta-origem">Conta de Origem:</label>
+        <input type="text" id="conta-origem" name="conta-origem" required><br><br>
+        <label for="conta-destino">Conta de Destino:</label>
+        <input type="text" id="conta-destino" name="conta-destino" required><br><br>
+        <label for="valor-transferencia">Valor a Transferir:</label>
+        <input type="number" id="valor-transferencia" name="valor-transferencia" step="0.01" required><br><br>
+        <input type="submit" value="Transferir">
+    </form>
+
+    <h2>Depósito</h2>
+    <form>
+        <label for="conta-deposito">Conta para Depósito:</label>
+        <input type="text" id="conta-deposito" name="conta-deposito" required><br><br>
+        <label for="valor-deposito">Valor a Depositar:</label>
+        <input type="number" id="valor-deposito" name="valor-deposito" step="0.01" required><br><br>
+        <input type="submit" value="Depositar">
+    </form>
+
+    <h2>Conferir Saldo</h2>
+    <form>
+        <label for="conta-saldo">Conta para Conferir Saldo:</label>
+        <input type="text" id="conta-saldo" name="conta-saldo" required><br><br>
+        <input type="submit" value="Conferir Saldo">
+    </form>
+</body>
+</html>
